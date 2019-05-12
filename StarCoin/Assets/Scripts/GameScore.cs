@@ -8,6 +8,7 @@ public class GameScore : MonoBehaviour
 {
     private Text scoreText;
     private int currentScore = 0;
+    private int newScoreValue = 1;
 
     private Scene scene;
 
@@ -19,16 +20,19 @@ public class GameScore : MonoBehaviour
     }
 
 
-    public void AddScore(int newScoreValue)
+    public void AddScore()
     {
         currentScore += newScoreValue;
         UpdateScore();
     }
 
-    public void SubtractScore(int newScoreValue)
+    public void SubtractScore()
     {
-        currentScore -= newScoreValue;
-        UpdateScore();
+        if (currentScore > 0) 
+        {
+            currentScore -= newScoreValue;
+            UpdateScore();
+        }
     }
 
     public void UpdateScore()
