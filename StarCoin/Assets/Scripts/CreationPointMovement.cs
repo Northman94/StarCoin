@@ -6,6 +6,6 @@ public class CreationPointMovement : MonoBehaviour
 {
     private void FixedUpdate()
     {
-        transform.position = new Vector3(Random.Range(-4.5f, 5f), 7f, 7f); // ( X ) / Y / Z
+        transform.position = new Vector3(Random.Range(-4.5f, 5f), 7f, -2f); // ( X ) / Y / Z
     }
 }
